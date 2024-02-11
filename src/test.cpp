@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 int binarySearch(const std::vector<int>& vector, int item)
 {
@@ -28,13 +29,43 @@ int binarySearch(const std::vector<int>& vector, int item)
 
     return -1;
 }
+
+void SortVector(std::vector<int>& vector)
+{
+    std::sort(vector.begin(), vector.end(), [](int a, int b) -> bool
+    {
+        return a < b;
+    });
+}
+void OutputVector(const std::vector<int>& vector)
+{
+    for(const int& a : vector)
+    {
+       std::cout << a; 
+    }
+
+    std::cout << std::endl;
+}
+
 int main()
 {
-    std::vector<int> nums = {1, 2, 3, 4, 5, 6, 7, 8};
+    std::vector<int> nums = {9, 6, 3, 5, 7, 2, 1, 4, 8};
 
-    binarySearch(nums, 6);
+    int num = 5;
 
-    // to do: output 
+    SortVector(nums);
+    OutputVector(nums);
+
+    const int result = binarySearch(nums, num);
+
+    if (result == -1)
+    {
+        std::cout << "Number not found" << std::endl;
+    }
+    else
+    {
+        std::cout << "Number " << num << " found at position " << result << std::endl;
+    }
 
     return 0;
 }
