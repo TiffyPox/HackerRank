@@ -4,7 +4,8 @@
 #include <iostream>
 #include <algorithm>
 
-int solveMeFirst(int a, int b) {
+int solveMeFirst(int a, int b) 
+{
     // Hint: Type return a+b; below:
 }
 
