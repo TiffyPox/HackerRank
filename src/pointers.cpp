@@ -15,7 +15,8 @@ void update(int *a,int *b)
     }
 }
 
-int main() {
+int main() 
+{
     int a, b;
     int *pa = &a, *pb = &b;
     
