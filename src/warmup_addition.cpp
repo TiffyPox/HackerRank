@@ -9,7 +9,8 @@ int solveMeFirst(int a, int b)
     // Hint: Type return a+b; below:
 }
 
-int main() {
+int main() 
+{
     int num1 = 0; 
     int num2 = 0;
     int sum = 0;
